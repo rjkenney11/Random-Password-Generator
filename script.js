@@ -35,7 +35,7 @@ function writePassword() {
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
 
-    passwordText.value = password;
+    passwordText.textContent = password;
 }
 
 function promptanswers() {
@@ -53,7 +53,6 @@ function promptanswers() {
 function generatePassword() {
     promptanswers();
     var possibleChar = [];
-    console.log(possibleChar);
 
     if (selectup) {
         possibleChar = possibleChar.concat(upper);
@@ -61,22 +60,25 @@ function generatePassword() {
     if (selectlow) {
         possibleChar = possibleChar.concat(lower);
     }
-    if (selected) {
+    if (selectspec) {
         possibleChar = possibleChar.concat(spchar);
     }
-    if (selected) {
+    if (selectnum) {
         possibleChar = possibleChar.concat(number);
     }
 
+    console.log(possibleChar);
+    for (var i = 0; i < pswdLength; i++) {
+        var index = Math.floor(Math.random() * possibleChar.length);
+        console.log(index);
+        var NewPswd = possibleChar[index];
+        console.log(NewPswd);
+        userPswd += NewPswd
+        console.log(userPswd);
 
-    for (i = 0; i < pswdlength; i++) {
-        userPswd += possibleChar.concat[Math.floor(Math.random() * possibleChar.length)];
     }
 
-    document.querySelector('input[type="text"]').value = userPswd;
-
-
-    return userPswd;
+    return userPswd
 }
 
 
