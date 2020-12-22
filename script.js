@@ -29,24 +29,26 @@ var selectlow;
 var selectspec;
 var selectnum;
 
+
 // Write password to the #password input
 function writePassword() {
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
 
-    function promptanswers() {
-        pswdLength = prompt("How many characters would you like your password to be? (Choose a number between 8-128)");
-        if (pswdLength < 8 || pswdLength > 128) {
-            alert("Invalid password length");
-            return;
-        }
-        selectup = confirm("Would you like to include uppercase letters in your password?");
-        selectlow = confirm("Would you like to include lowercase letters in your password?");
-        selectspec = confirm("Would you like to include special characters in your password?");
-        selectnum = confirm("Would you like to include numbers in your password?");
-    }
-
     passwordText.value = password;
+}
+
+function promptanswers() {
+    pswdLength = prompt("How many characters would you like your password to be? (Choose a number between 8-128)");
+    if (pswdLength < 8 || pswdLength > 128) {
+        alert("Invalid password length");
+        return;
+    }
+    selectup = confirm("Would you like to include uppercase letters in your password?");
+    selectlow = confirm("Would you like to include lowercase letters in your password?");
+    selectspec = confirm("Would you like to include special characters in your password?");
+    selectnum = confirm("Would you like to include numbers in your password?");
+}
 
     function generatePassword() {
         promptanswers();
