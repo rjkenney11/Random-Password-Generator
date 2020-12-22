@@ -50,36 +50,36 @@ function promptanswers() {
     selectnum = confirm("Would you like to include numbers in your password?");
 }
 
-    function generatePassword() {
-        promptanswers();
-        var possibleChar = [];
-        console.log(possibleChar);
+function generatePassword() {
+    promptanswers();
+    var possibleChar = [];
+    console.log(possibleChar);
 
-        if (selectup) {
-            possibleChar = possibleChar.concat(upper);
-        }
-        if (selectlow) {
-            possibleChar = possibleChar.concat(lower);
-        }
-        if (selected) {
-            possibleChar = possibleChar.concat(spchar);
-        }
-        if (selected) {
-            possibleChar = possibleChar.concat(number);
-        }
-
-        
-        for(var i = 0; i<l; i++){
-                userPswd += possibleChar.charAt(Math.floor(Math.random() * pswdLength.length));
-        }
-
-
-
-
-        return userPswd;
+    if (selectup) {
+        possibleChar = possibleChar.concat(upper);
+    }
+    if (selectlow) {
+        possibleChar = possibleChar.concat(lower);
+    }
+    if (selected) {
+        possibleChar = possibleChar.concat(spchar);
+    }
+    if (selected) {
+        possibleChar = possibleChar.concat(number);
     }
 
 
+    for (i = 0; i < pswdlength; i++) {
+        userPswd += possibleChar.concat[Math.floor(Math.random() * possibleChar.length)];
+    }
 
-    // Add event listener to generate button
-    generateBtn.addEventListener("click", writePassword);
+    document.querySelector('input[type="text"]').value = userPswd;
+
+
+    return userPswd;
+}
+
+
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
