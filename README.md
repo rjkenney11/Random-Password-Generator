@@ -1,7 +1,7 @@
 # homework-3
 
 ## Random Password Generator
-The objective of this homework was to create a password generator that would randomly make a string of characters that could include uppercase/lowercase letters, special characters and numbers based on the users selections or preferences.
+Create a password generator that would randomly make a string of characters that could include uppercase/lowercase letters, special characters and numbers based on the users selections or preferences.
 
 
 ## Motivation
