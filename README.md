@@ -1,7 +1,7 @@
 # homework-3
 
 ## Random Password Generator
-Create a password generator that would randomly make a string of characters that could include uppercase/lowercase letters, special characters and numbers based on the users selections or preferences.
+A password generator that randomly makes a string of characters that can include uppercase/lowercase letters, special characters and numbers based on the users selections or preferences.
 
 
 ## Motivation
